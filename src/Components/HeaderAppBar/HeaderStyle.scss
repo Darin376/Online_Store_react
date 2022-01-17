@@ -1,0 +1,154 @@
+.headerContainer {
+    width:100%;
+    height: auto;
+    position: relative;
+}
+.headerWrapper {
+    height: 75px;
+    width:100%;
+    z-index: 2;
+    position: fixed;
+    top:0; 
+    background-color:rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.headerLeft {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.headerSearchContainer {
+    width:70%;
+    height:4.2vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--sky);
+}
+.headerInput {
+    font-weight: 600;
+    border: none;
+    width:90%;
+    height:100%; 
+    border:0.7px solid black;
+}
+.headerCenter {
+    flex: 1;
+    text-align: center;
+}
+.headerLogo {
+    cursor:pointer;
+    font-weight:600;
+    font-size: 22px;
+    color:#3f4954;
+}
+.headerRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 15px 0px 0px;
+}
+.headerMenuItem {
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerMenuItemProfile {
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+.headerProfileIcon {
+    display: none;
+}
+.headerProfileIconLeft {
+    width:100%;
+}
+.headerProfileIconSearchContainer {
+    width:100%;
+    height:2.5vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--sky);
+}
+.headerProfileIconInput {
+    font-weight: 600;
+    border: none;
+    width:100%;
+    height:100%; 
+    border:0.7px solid black;
+}
+.headerProfileIconRight {
+    padding: 5px 10px 0px 0px;
+    width:100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.6); 
+}
+ 
+@media(max-width:1100px){
+
+.headerLogo {
+   font-size:20px ;
+    }
+.headerMenuItem {
+   font-size: 22px;
+  }
+.headerMenuItemProfile {
+   font-size: 12px;
+   margin-left: 15px;
+}
+}
+@media(max-width:650px){
+.headerWrapper {
+    display: none;
+    cursor:pointer;
+    }
+.headerMenuItemProfile {
+    display: none;
+    }
+.headerProfileIcon {
+    display: block;
+    flex-direction: column;
+    cursor:pointer;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:15px;
+    z-index: 2;
+    position: fixed;
+    width:100%;
+    }
+    .headerProfileIconRight {
+    justify-content: space-evenly;
+     }
+  }
+
+@media(max-width:420px){
+.headerLogo {
+    font-size: 16px;
+    padding-left: 20px; 
+    }
+.headerMenuItem {
+    font-size: 12px;
+    cursor: pointer;
+  }
+.headerProfileIconRight {
+   padding: 10px 35px 0px 0px;
+   justify-content: center;
+}}

@@ -1,0 +1,47 @@
+.searchProductsContainer {
+    padding-top: 30px;
+    background-image: url('../../../Img/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height:95vh;
+    width: 100%;
+    background-size: 65%;
+}
+ 
+ 
+.searchProductsWrapper {
+    padding: 20px 0px 20px 0px;
+}
+.searchProductsInfo {
+    flex: 1;
+}
+.searchProductsProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.searchProductsProductDetail {
+    display: flex;
+    padding:20px ;
+    width:260px;
+}
+.searchProductsReturn {
+    display:flex;
+    justify-content: center;
+}
+
+@media(max-width:420px){
+    .searchProductsReturn {
+        padding: 20px;
+    }
+    .searchProductsWrapper {
+        padding: 10px;
+    }
+    .searchProductsProductDetail {
+        padding: 20px 10px 20px 10px;
+        width:240px;
+    }
+    .searchProductsContainer {
+        padding-top: 50px  ;
+    }
+  }

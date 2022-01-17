@@ -1,0 +1,147 @@
+ 
+.ProductsInfoLeft .myCub {
+  width: 65rem;
+  height: 50rem;
+}
+.ProductsInfoLeft .myCub .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.ProductsInfoLeft .myCub.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.ProductsInfoWrapper {
+  padding: 30px 0px  10px 0px;
+ 
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height:95vh;
+  width: 100%;
+  background-size: 65%;
+  display: flex;
+  justify-content: space-around;
+}
+.ProductsInfoLeft {
+  padding-top: 50px;
+}
+.productsInfoImg {
+  width: 100%;
+  height: 94%;
+}
+.mainHeading {
+  font-weight: 600;
+  color: black;
+  font-size: 34px;
+  padding:0px 0px 20px 0px ;
+}
+.description {
+  font-size: 22px;
+   font-variant: small-caps;
+  color: black;
+}
+.headingPrise {
+   font-weight: 900;
+ color: black;
+  font-size: 34px;
+  padding:0px 0px 0px 0px ;
+}
+.quantityProductsP {
+  color:red;
+  margin: 0;
+}
+.quantityProducts {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+ 
+  font-size: 32px;
+}
+.productsInfoWrapperButton {
+padding: 20px 0px 20px 0px;
+}
+.productsInfoReturn {
+  padding:  0px 0px 20px 0px ;
+}
+.productsInfoNameButton {
+  font-size: 14px;
+}
+@media(max-width:1510px){
+  .ProductsInfoLeft .myCub {
+    width: 45rem;
+    height: 40rem;
+  }
+  .description {
+    font-size: 20px;
+ ;
+  }
+}
+@media(max-width:1300px){
+  .ProductsInfoWrapper {
+ display: block;
+  }
+  .ProductsInfoLeft .myCub {
+    width: 70rem;
+    height: 55rem;
+  }
+  .ProductsInfoLeft {
+    padding-top: 0px;
+  }
+  .ProductsInfoRight {
+    padding-left: 40px;
+  }
+}
+@media(max-width:1150px){
+
+  .ProductsInfoLeft .myCub {
+    width: 55rem;
+    height: 40rem;
+  }
+}
+@media(max-width:915px){
+ .ProductsInfoLeft .myCub {
+    width: 45rem;
+    height: 35rem;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
+@media(max-width:750px){
+  .ProductsInfoLeft .myCub {
+    width: 35rem;
+    height: 25rem;
+  }
+  .ProductsInfoLeft {
+    padding-top: 30px;
+  }
+}
+@media(max-width:600px){
+  .ProductsInfoLeft .myCub {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+@media(max-width:500px){
+  .ProductsInfoLeft .myCub {
+    width: 20rem;
+    height: 20rem;
+  }
+  .productsInfoImg {
+    width: 100%;
+    height: 90%;
+  }
+  .ProductsInfoRight {
+    padding-left: 20px;
+  }
+}
+@media(max-width:350px){
+  .ProductsInfoLeft .myCub {
+    width: 16rem;
+    height: 16rem;
+  }
+  .ProductsInfoLeft {
+    padding-top: 40px;
+  }
+}

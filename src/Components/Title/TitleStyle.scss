@@ -1,0 +1,28 @@
+.site-title {
+    background-image: url('../../Img/BackgroundTop-image.png');
+    background-size: cover;
+    height: 115vh;
+    display: flex;
+    justify-content: center;
+}
+ 
+.site-title .site-background{
+    padding-top: 16rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.site-title h1, h3{
+    margin: .3rem;
+}
+
+.site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+.site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}

@@ -1,0 +1,70 @@
+.categoriesContainer {
+    padding: 20x 0px  10px 0px;
+    background-image: url('../../Img/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height:95vh;
+    width: 100%;
+    background-size: 65%;
+    margin: 0;
+}
+.categoriesWrapper {
+    display: flex;
+     flex-wrap: wrap;
+     padding: 30px 20px 10px 10px;
+}
+.categoriesInfo {
+    flex: 1;
+}
+.categoriesProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.categoriesProductDetail {
+    display: flex;
+    padding:30px 20px 40px 20px;
+    width:260px;
+}
+.categoriesReturn {
+    display:flex;
+ 
+   justify-content: center;
+}
+.CategoriesSortPrise {
+    padding: 30px 0px 20px 50px;
+    align-items: center;
+}
+.CategoriesPagesActiv {
+    color: red;
+    cursor: pointer;
+}
+.CategoriesPages{
+    cursor: pointer;
+}
+.CategoriesPagesWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+}
+.CategoriesPagesWrapper span {
+    padding-left: 15px;
+    font-size: 24px;
+}
+@media(max-width:420px){
+    .categoriesWrapper {
+        padding: 30px 0px 10px 0px;
+    }
+    .categoriesProductDetail {
+        padding: 45px 0px 5px 10px;
+        width: 240px;
+    }
+    .categoriesReturn {
+      padding: 25px;
+    }
+    .CategoriesSortPrise {
+        padding: 55px 0px 0px 35px;
+        text-align: center;
+        display: flex;
+    }
+}

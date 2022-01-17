@@ -1,0 +1,87 @@
+ .CartWrapper {
+    padding: 65px 0px  10px 0px;
+    background-image: url('../../Img/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height:95vh;
+    width: 100%;
+    background-size: 65%;
+}
+.cartContainer {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding:0px 50px 50px 50px;
+}
+.cartWrapperContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.cartWrapperItem {
+ margin: 20px;
+    width: 270px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 5px cornflowerblue;
+    transition: all 0.5s ease-in-out;
+}
+.cartWrapperItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 5px black;
+}
+.cartRenderEmptyCart {
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.cartItemContainer {
+    display: flex;
+    flex-direction: column;
+}
+.cartItemContainerButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:8px 5px 25px 5px;
+}
+.cartItemContainer {
+    width:100%;
+}
+.cartImgWrapper {
+   
+}
+.cartButtonWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catrItemImg {
+    width: 100%;
+    height: 270px;
+}
+.cartItemRemoveCart {
+    height: 10px;
+    width:180px;
+    padding:0px 0px 30px 7px;
+}
+ 
+@media(max-width:450px){
+    .cartContainer {
+    padding: 0px;
+    }
+    .cartItemRemoveCart {
+        padding:0px 0px 60px 7px;
+    }
+}
+@media(max-width:350px){
+    .cartItemRemoveCart {
+        padding:0px 0px 70px 0px;
+    }
+    .CartWrapper {
+        padding: 85px 0px  10px 0px;
+
+    }
+}
