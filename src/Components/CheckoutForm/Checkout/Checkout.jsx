@@ -19,10 +19,11 @@ export const Checkout = () => {
 
     let navigate = useNavigate();
     const CheckoutProducts = useSelector((state) => {
-        const { ProductsReducer,CartReduser } = state;
+        const { ProductsReducer,CartReduser,OrederReduser } = state;
         const products = {
             cartReduser: CartReduser,
-            productsReducer: ProductsReducer
+            productsReducer: ProductsReducer,
+            orederReduser:OrederReduser
         }
         return products
     });
@@ -68,9 +69,9 @@ export const Checkout = () => {
     let Confirmation = () => (finish ? (
         <>
             <div>
-                <Typography variant="h5">Спасибо за покупку, {CheckoutProducts.productsReducer.order.customer.firstname} {CheckoutProducts.productsReducer.order.customer.lastname}!</Typography>
+                <Typography variant="h5">Спасибо за покупку, {CheckoutProducts.orederReduser.order.customer.firstname} {CheckoutProducts.orederReduser.order.customer.lastname}!</Typography>
                 <Divider className={classes.divider} />
-                <Typography variant="subtitle2">Номер заказа: {CheckoutProducts.productsReducer.order.customer_reference}</Typography>
+                <Typography variant="subtitle2">Номер заказа: {CheckoutProducts.orederReduser.order.customer_reference}</Typography>
             </div>
             <br />
             <Button component={Link} variant="outlined" type="button" to="/">Вернуться в магазин</Button>
@@ -81,10 +82,10 @@ export const Checkout = () => {
         </div >
     ));
 
-    if (CheckoutProducts.productsReducer.errorMessage) {
+    if (CheckoutProducts.orederReduser.errorMessage) {
         Confirmation = () => (
             <>
-                <Typography variant="h5">Ошибка: {CheckoutProducts.productsReducer.errorMessage}</Typography>
+                <Typography variant="h5">Ошибка: {CheckoutProducts.orederReduser.errorMessage}</Typography>
                 <br />
                 <Button component={Link} variant="outlined" type="button" to="/">Вернуться в магазин</Button>
             </>

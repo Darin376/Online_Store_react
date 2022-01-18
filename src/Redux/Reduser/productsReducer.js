@@ -4,8 +4,6 @@ const initialState = {
     categoriesProducts: [],
     productsAll: [],
     searchProducts: [],
-    order: {},
-    errorMessage: '',
 }
 
 export const ProductsReducer = (state = initialState, action) => {
@@ -24,16 +22,6 @@ export const ProductsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 searchProducts: action.payload.searchProducts
-            }
-        case todoActionTypes.ORDER:
-            return {
-                ...state,
-                order: action.payload.setOrder,
-            }
-        case todoActionTypes.ERROR_MESSAGE:
-            return {
-                ...state,
-                errorMessage: action.payload.errorMassage
             }
         default:
             return state
