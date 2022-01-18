@@ -71,6 +71,11 @@
 }
 .site-content > .sidebar .category-list{
     font-family: var(--Livvic);   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .site-content > .sidebar .category-list .list-items{
@@ -152,10 +157,11 @@
 }
  .discountInfo {
     background-color: cornflowerblue;
-     font-size: 1.5rem;
+    font-size: 1.5rem;
     border-radius: 15px;
-    margin: 100px 100px 0px 100px;
+    margin: 80px 0px ;
     padding: 10px;
+    width: 100%;
     color:white;
     cursor: pointer;
     border: 1px solid white;
@@ -168,7 +174,7 @@
   }
  @media only screen and (max-width: 1450px){
     .discountInfo {
-        margin: 100px 50px 0px 50px;
+       
      }
 }
 @media only screen and (max-width: 1130px){
@@ -178,7 +184,7 @@
         border-radius: 0% !important;
     }
     .discountInfo {
-        margin: 50px 0px 0px 0px;
+      
      }
 
     .site-content .sidebar .popular-post .post-info{
@@ -190,8 +196,9 @@
         flex-direction: column;
     }
     .discountInfo {
-        margin: 100px 0px 0px 50px;
+        width: 80%;
         font-size: 1.3rem;
+        margin: 80px 50px;
      }
 
    .toggle-collapse{
@@ -211,8 +218,9 @@
         display: none;
     }
     .discountInfo {
-        margin: 50px 0px 0px 30px;
-        font-size: 1.3rem;
+      width: 100%;
+      margin: 80px 0px 0px  0px;
+      font-size: 1.3rem;
      }
 
     .toggle-collapse{
