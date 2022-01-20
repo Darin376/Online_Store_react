@@ -11,7 +11,10 @@ import "./HeaderStyle.scss";
 import LogoutIcon from '@mui/icons-material/Logout';
 import {userLogin} from '../../Redux/user/userActions';
 import {userLogout} from '../../Redux/user/userActions';
- 
+import { useAuthState } from "react-firebase-hooks/auth";
+import firebase from "firebase/compat/app";
+import Spinner from "../../Spinner/spinner";
+
 export const HeaderAppBar = () => {
     const dispatch = useDispatch();
     const [inputText, setInputText] = useState('');
@@ -19,14 +22,14 @@ export const HeaderAppBar = () => {
     const navigate = useNavigate();
     const pathname = () => navigate(1);
     const location = useLocation();
-
-
+    const auth = firebase.auth();
+    const [user, loading, error] = useAuthState(auth);
+ 
     const allInfo = useSelector((state) => {
-        const { ProductsReducer,CartReduser,userReducer} = state;
+        const { ProductsReducer,CartReduser} = state;
         const allInfo = {
             total_items: CartReduser.cart.total_items,
             productsAll: ProductsReducer.productsAll,
-            user:userReducer.user
         }
         return allInfo
     });
@@ -58,13 +61,13 @@ export const HeaderAppBar = () => {
 
     let CartColor = allInfo.total_items ? 'red' : '#c9d1d9';
     let searchLink = !inputText ? pathname : '/Search';
-    const googleUser = (
+    const googleUser = (loading?<Spinner/>:
         <div>
-            {allInfo.user ? (
+            {user? (
                 <div className="UserAuth">
                      <div className="UserAuthName">
-                     <img src={allInfo.user.photoURL} alt="imgLogin" />
-                     <p>{allInfo.user.displayName} </p>
+                     <img src={user.photoURL} alt="imgLogin" />
+                     <p>{user.displayName} </p>
                      </div>
                     <div>
                     <LogoutIcon  className="headerLogout"   onClick={handleSubmitOut}/>

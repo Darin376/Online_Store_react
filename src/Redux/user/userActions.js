@@ -1,6 +1,6 @@
 import {signIn, auth} from '../../FireBase/fireBaseAuth';
 import {userActionTypes} from './userTupes';
-import {db} from '../../FireBase/FireBaseConfig';
+ 
 
 export const userLogin = () => {
     return (dispatch) => {
