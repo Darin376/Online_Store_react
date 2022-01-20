@@ -3,7 +3,7 @@ import { Typography, Button, Divider } from '@material-ui/core';
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useDispatch } from 'react-redux';
-import { handleCaptureCheckout } from "../../Redux/actions";
+import { handleCaptureCheckout } from "../../Redux/Products/actions";
 import Review from './Review';
 import Spinner from '../../Spinner/spinner';
 

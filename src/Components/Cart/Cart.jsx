@@ -3,7 +3,7 @@ import { Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem/CartItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { handleEmptyCart } from '../../Redux/actions';
+import { handleEmptyCart } from '../../Redux/Products/actions';
 import "./Cart.scss";
 import Spinner from '../../Spinner/spinner';
 

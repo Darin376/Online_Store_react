@@ -1,4 +1,4 @@
-import { todoActionTypes } from "../types"
+import { todoActionTypes } from "./types"
 
 const initialState = {
     order: {},

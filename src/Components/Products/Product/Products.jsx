@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { handleAddToCart } from '../../../Redux/actions';
+import { handleAddToCart } from '../../../Redux/Products/actions';
 import { ShoppingCart } from "@material-ui/icons";
  
 import "./ProductsStyle.scss";

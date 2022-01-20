@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { commerce } from './DataBase/commerce';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { addProductsPerCategory, addedCart, addProducts } from "./Redux/actions";
+import { addProductsPerCategory, addedCart, addProducts } from "./Redux/Products/actions";
 import { RoadBikes, MountainBikes, CityBikes,ChildrenBicycles,HybridBikes } from './Components/Categories';
 import { NotFoundPage, MainMenu, HeaderAppBar, Cart, ProductsInfo, Footer, SearchProducts, Checkout } from './Components';
 import "./app.css";

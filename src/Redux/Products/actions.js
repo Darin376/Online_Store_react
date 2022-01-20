@@ -1,4 +1,4 @@
-import { commerce } from '../DataBase/commerce';
+import { commerce } from '../../DataBase/commerce';
 import { todoActionTypes } from "./types";
 
 export const addProductsPerCategory = (data) => ({

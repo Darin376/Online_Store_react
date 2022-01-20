@@ -3,32 +3,44 @@ import { useSelector } from 'react-redux';
 import { Link, useLocation } from "react-router-dom";
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addSearchProducts } from '../../Redux/actions';
+import { addSearchProducts } from '../../Redux/Products/actions';
 import { useNavigate } from "react-router-dom";
 import "./HeaderStyle.scss";
-
+import LogoutIcon from '@mui/icons-material/Logout';
+import {userLogin} from '../../Redux/user/userActions';
+import {userLogout} from '../../Redux/user/userActions';
+ 
 export const HeaderAppBar = () => {
     const dispatch = useDispatch();
     const [inputText, setInputText] = useState('');
     const [searchProducts, setSearchProducts] = useState({});
-
     const navigate = useNavigate();
     const pathname = () => navigate(1);
     const location = useLocation();
-    const productQuantity = useSelector((state) => {
-        const { ProductsReducer,CartReduser } = state;
-        const products = {
+
+
+    const allInfo = useSelector((state) => {
+        const { ProductsReducer,CartReduser,userReducer} = state;
+        const allInfo = {
             total_items: CartReduser.cart.total_items,
-            productsAll: ProductsReducer.productsAll
+            productsAll: ProductsReducer.productsAll,
+            user:userReducer.user
         }
-        return products
+        return allInfo
     });
 
-    let productsAll = { products: productQuantity.productsAll }
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        dispatch(userLogin());
+      };
+      const handleSubmitOut = (event) => {
+        event.preventDefault();
+        dispatch(userLogout());
+      };
+    
+    let productsAll = { products: allInfo.productsAll }
     const handleClick = (searchProduct) => {
         let products = searchProduct.toLowerCase()
         const filteredProducts = productsAll.products.filter(
@@ -45,43 +57,25 @@ export const HeaderAppBar = () => {
         dispatch(addSearchProducts(searchProducts))
     }, [searchProducts])
 
-    let CartColor = productQuantity.total_items ? 'red' : '#c9d1d9';
+    let CartColor = allInfo.total_items ? 'red' : '#c9d1d9';
     let searchLink = !inputText ? pathname : '/Search';
-
-
-    const headerNone = (
-        <div className="headerProfileIcon">
-            {location.pathname !== '/checkout' && (
-                <div className="headerProfileIconLeft">
-                    <div className="headerProfileIconSearchContainer">
-                        <input className="headerProfileIconInput"
-                            placeholder="Поиск товаров Stels,Forward,Stinger,kaiman,Sven,Cona т.д"
-                            type='text'
-                            value={inputText}
-                            onChange={((e) => setInputText(e.target.value))}
-                        />
-                        <Link to={searchLink} style={{ color: 'black' }} >
-                            <Search style={{ fontSize: '36', cursor: 'pointer', paddingRight: '15px', }}
-                                onClick={() => !inputText ? notInputText() : handleClick(inputText)} />
-                        </Link>
+    const googleUser = (
+        <div>
+            {allInfo.user ? (
+                <div className="UserAuth">
+                     <div className="UserAuthName">
+                     <img src={allInfo.user.photoURL} alt="imgLogin" />
+                     <p>{allInfo.user.displayName} </p>
+                     </div>
+                    <div>
+                    <LogoutIcon  className="headerLogout"   onClick={handleSubmitOut}/>
                     </div>
                 </div>
+            ) : (
+                <button className='UserGoogleButton'  onClick={handleSubmit} >
+                  Вход Google
+                </button>
             )}
-            <div className="headerProfileIconRight">
-                <Link to='/' >
-                    <h3 className="headerLogo">Магазин велосипедов <span style={{ color: 'green' }} >Raptor</span></h3>
-                </Link>
-                {location.pathname !== '/checkout' && (
-                    <div className="headerMenuItem">
-                        <AccountCircle sx={{ fontSize: 30 }} />
-                        <Link to='/cart' style={{ color: CartColor, paddingLeft: '30px' }} >
-                            <Badge badgeContent={productQuantity.total_items} >
-                                <ShoppingCartOutlined style={{ fontSize: '30' }} />
-                            </Badge>
-                        </Link>
-                    </div>
-                )}
-            </div>
         </div>
     )
     return (
@@ -103,25 +97,28 @@ export const HeaderAppBar = () => {
                         </div>
                     </div>
                 )}
-                <div className="headerCenter">
+                <div className="headerRightWrapper">
+                    <div className="headerLogoWrapper">
                     <Link to='/' >
                         <h3 className="headerLogo">Магазин велосипедов <span style={{ color: 'green' }} >Raptor</span></h3>
                     </Link>
-                </div>
-                {location.pathname !== '/checkout' && (
+                    </div>
+                <div className="headerCenter">
+                    {location.pathname !== '/checkout' && (
                     <div className="headerRight">
-                        <div className="headerMenuItemProfile">Профиль</div>
+                        {googleUser}
                         <div className="headerMenuItem">
                             <Link to='/cart' style={{ color: CartColor }} >
-                                <Badge badgeContent={productQuantity.total_items} >
+                                <Badge badgeContent={allInfo.total_items} >
                                     <ShoppingCartOutlined style={{ fontSize: '30' }} />
                                 </Badge>
                             </Link>
                         </div>
                     </div>
                 )}
+                </div>
+                </div>
             </div>
-            {headerNone}
         </div>
     );
 };

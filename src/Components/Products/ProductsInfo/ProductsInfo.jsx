@@ -5,7 +5,7 @@ import { ShoppingCart } from '@material-ui/icons';
 import { useDispatch } from 'react-redux';
 import { Button } from "@material-ui/core";
 import Spinner from "../../../Spinner/spinner";
-import { handleAddToCart } from "../../../Redux/actions";
+import { handleAddToCart } from "../../../Redux/Products/actions";
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
 import "swiper/swiper.min.css";

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, CardContent, CardMedia, Button } from '@material-ui/core';
 import { CardActionArea } from '@mui/material';
-import { handleRemoveFromCart, handleUpdateCartQty } from '../../../Redux/actions';
+import { handleRemoveFromCart, handleUpdateCartQty } from '../../../Redux/Products/actions';
 import { useDispatch } from 'react-redux';
 import "../Cart.scss";
 
