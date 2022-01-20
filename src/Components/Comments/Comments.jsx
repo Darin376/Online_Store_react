@@ -6,18 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'firebase/compat/firestore';
-import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "./CommentsStyle.scss";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import { useSelector } from 'react-redux';
- 
+import { useAuthState } from "react-firebase-hooks/auth";
+import firebase from "firebase/compat/app";
+
 export const Comments = () => {
     const bd = firebase.firestore();
-    const user = useSelector((state) => {
-        const { userReducer} = state;
-        return userReducer.user
-    });
+    const auth = firebase.auth();
+    const [user, loading, error] = useAuthState(auth);
+
     const [allDocs, setAllDocs] = useState([]);
     const [reload, setReload] = useState(true);
     const [modalShow, setModalShow] = useState(false);
