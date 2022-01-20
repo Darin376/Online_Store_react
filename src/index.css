@@ -1,6 +1,7 @@
 html, body{
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: auto !important;
   margin:0
 }
 :root{

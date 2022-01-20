@@ -35,6 +35,8 @@
     width:90%;
     height:100%; 
     border:0.7px solid black;
+    padding: 8px;
+    border-radius: 10px;
 }
 .headerCenter {
     text-align: center;
@@ -138,7 +140,7 @@
     height:3vh;
 }
 .headerWrapper {
-    height:100px;
+    height:80px;
 }
 .headerRightWrapper {
     padding-bottom: 6px;
@@ -209,6 +211,4 @@
    padding: 10px 35px 0px 0px;
    justify-content: center;
 }
-.headerWrapper {
-    height:110px;
-}}
+ }

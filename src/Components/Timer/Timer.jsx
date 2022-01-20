@@ -59,7 +59,7 @@ export const Timer = () => {
                         <span>Секунд</span>
                     </div>
                 </div>
-                <Link1 to='products' smooth={true} duration={1000} >
+                <Link1 to='products' smooth={true} duration={1000}>
                     <button className="Btn" >Узнать информацию</button>
                 </Link1>
             </div>

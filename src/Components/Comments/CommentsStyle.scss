@@ -1,0 +1,115 @@
+.userWrapper {
+    background-image: url('../../Img/Abract01.png');
+    background-size: cover;
+    min-height: 115vh;
+    display: flex;
+    justify-content:center;
+    padding: 100px 0px 50px 0px;
+}
+ .userName {
+     display: flex;
+ }
+ .userName img{
+     width: 30px;
+     height: 30px;
+} 
+.userCommentsContainer{
+    display: flex;
+    width: 70%;
+    border: 1px solid rgb(209, 240, 152);
+    min-height: 80px;
+    border-radius: 10px;
+    justify-content: space-between;
+    background: var(--sky);
+}
+.userCommentsContainer p {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    padding: 5px 0px 0px 15px;
+}
+.userComentsWrapper {
+    width: 80%;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.UserFetchInput {
+    width: 178px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.UserFetchInput button {
+     border-radius: 10px;
+     cursor: pointer;
+     background: var(--sky);
+     color: black;
+      padding: 5px;
+     font-size: 16px;
+     font-weight: 600;
+}
+.UserFetchInput button:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.userWrapper h3{
+    padding-bottom: 50px;
+}
+.userInfoWrapper {
+    padding: 20px 0px 20px 0px;
+}
+.UserCommentsBotton {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+    
+}
+.UserCommentsBotton:hover {
+    background-color: white;
+    color: black;
+}
+.userComentsWrapper h3 {
+    font-weight: 600;
+    font-size: 26px;
+    padding: 10px;
+}
+.userCommentsdelWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserComments {
+    width: 100%;
+    display: flex;
+}
+ 
+@media(max-width:650px){
+    .userCommentsContainer p {
+        font-size: 14px;
+    }
+    .UserComments {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 12px;
+    }
+    .userCommentsContainer{
+        width: 100%;
+    }
+    .userWrapper {
+        padding: 100px  0px 50px  0px;
+    }
+    .userComentsWrapper {
+        width: 90%;
+    }
+    .UserFetchInput button {
+  
+        font-size: 14px;
+
+   }
+ }

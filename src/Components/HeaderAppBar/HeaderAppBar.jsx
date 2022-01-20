@@ -30,7 +30,6 @@ export const HeaderAppBar = () => {
         }
         return allInfo
     });
-
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(userLogin());
@@ -91,7 +90,7 @@ export const HeaderAppBar = () => {
                                 onChange={((e) => setInputText(e.target.value))}
                             />
                             <Link to={searchLink} style={{ color: 'black' }} >
-                                <Search style={{ fontSize: '36', cursor: 'pointer' }}
+                                <Search style={{ fontSize: '30', cursor: 'pointer' }}
                                     onClick={() => !inputText ? notInputText() : handleClick(inputText)} />
                             </Link>
                         </div>

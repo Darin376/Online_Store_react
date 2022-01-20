@@ -23,6 +23,7 @@
 .post-info{
  padding-left: 100px;
 }
+ 
 .site-content .post-content > .post-image > div{
     overflow: hidden;
 }
@@ -101,7 +102,7 @@
 .site-content .sidebar .popular-post .post-content{
     padding: 1rem 0;
 }
-
+ 
 .site-content .sidebar .popular-post h2{
     padding-top: 8rem;
 }
@@ -159,8 +160,8 @@
     background-color: cornflowerblue;
     font-size: 1.5rem;
     border-radius: 15px;
-    margin: 80px 0px ;
-    padding: 10px;
+    margin:20px 0px ;
+    padding-left: 30px;
     width: 100%;
     color:white;
     cursor: pointer;
@@ -184,8 +185,15 @@
         border-radius: 0% !important;
     }
     .discountInfo {
-      
+      font-size: 18px;
      }
+     .list-items {
+         font-size: 14px;
+     }
+     .site-content > .sidebar .category-list .list-items a{
+        
+        font-size: 14px;
+    }
 
     .site-content .sidebar .popular-post .post-info{
         display: none !important;
@@ -198,7 +206,7 @@
     .discountInfo {
         width: 80%;
         font-size: 1.3rem;
-        margin: 80px 50px;
+        margin: 20px  0px 20px 50px;
      }
 
    .toggle-collapse{
@@ -218,8 +226,8 @@
         display: none;
     }
     .discountInfo {
-      width: 100%;
-      margin: 80px 0px 0px  0px;
+      width: 90%;
+      margin: 20px 10px 0px  15px;
       font-size: 1.3rem;
      }
 
@@ -227,3 +235,12 @@
         width: 80% !important;
     }
 }
+@media only screen and (max-width: 320px){
+    .blog{
+         height: 125vh;
+     }
+     .site-content .post-content > .post-image .post-info{
+         display: none;
+     }
+ 
+ }

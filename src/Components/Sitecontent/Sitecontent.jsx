@@ -16,7 +16,7 @@ const Sitecontent = () => {
   });
 
   return (
-    <div className="container">
+    <div className="SiteContentcontainer">
       <div className="site-content">
         <div className="posts">
           {postInfo.map((item, index) => (
@@ -34,7 +34,12 @@ const Sitecontent = () => {
                 </li>
               ))}
             </ul>
-            <Link1 to='deal'  smooth={true} duration={1000} >
+            <Link to='/Comments'  >
+              <button className="discountInfo" data-aos="fade-up" data-aos-delay={600}>
+                <span>Оставить отзыв</span>
+              </button>
+            </Link>
+            <Link1 to='deal'  smooth={true}duration={1000} >
               <button className="discountInfo" data-aos="fade-up" data-aos-delay={600}>
                 <span>Узнать о скидке месяца</span>
               </button>

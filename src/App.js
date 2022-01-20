@@ -7,6 +7,7 @@ import { RoadBikes, MountainBikes, CityBikes,ChildrenBicycles,HybridBikes } from
 import { NotFoundPage, MainMenu, HeaderAppBar, Cart, ProductsInfo, Footer, SearchProducts, Checkout } from './Components';
 import "./app.css";
 import ScrollToTop from "./ScrollToTop/scrollToTop";
+import { Comments } from "./Components/Comments/Comments";
   
 export const App = () => {
     const dispatch = useDispatch();
@@ -58,6 +59,7 @@ export const App = () => {
                         <Route path='/Search' element={<SearchProducts />} />
                         <Route path='/Search/:id' element={<ProductsInfo />} />
                         <Route path='/Checkout' element={<Checkout />} />
+                        <Route path='/Comments' element={ <Comments/>} />
                         <Route path='*' element={<NotFoundPage />} />
                     </Routes>
                 </div>
