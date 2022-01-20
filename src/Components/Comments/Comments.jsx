@@ -176,7 +176,7 @@ export const Comments = () => {
         </div>
             <hr />
             <div  >
-                {allDocs.map((doc, index) => {
+                {allDocs.sort((a,b)=>a.data.data>b.data.data?1:-1).map((doc, index) => {
                     return (
                         <div key={index} className="userInfoWrapper">
                             <div className="userName">
