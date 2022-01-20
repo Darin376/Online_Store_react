@@ -7,3 +7,4 @@ export * from './Products/ProductsInfo/ProductsInfo';
 export * from './Footer/Footer';
 export * from './Products/SearchProducts/SearchProducts';
 export * from './CheckoutForm/Checkout/Checkout';
+export * from './Comments/Comments';

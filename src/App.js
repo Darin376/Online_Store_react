@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addProductsPerCategory, addedCart, addProducts } from "./Redux/Products/actions";
 import { RoadBikes, MountainBikes, CityBikes,ChildrenBicycles,HybridBikes } from './Components/Categories';
-import { NotFoundPage, MainMenu, HeaderAppBar, Cart, ProductsInfo, Footer, SearchProducts, Checkout } from './Components';
+import { NotFoundPage, MainMenu, HeaderAppBar, Cart, ProductsInfo, Footer, SearchProducts, Checkout,Comments } from './Components';
 import "./app.css";
 import ScrollToTop from "./ScrollToTop/scrollToTop";
-import { Comments } from "./Components/Comments/Comments";
+ 
   
 export const App = () => {
     const dispatch = useDispatch();
