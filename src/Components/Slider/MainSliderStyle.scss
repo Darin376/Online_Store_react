@@ -3,7 +3,6 @@
     background-image: url('../../Img/Abract01.png');
     background-repeat: no-repeat;
     background-position: right;
-    height:88vh;
     width: 100%;
     background-size: 65%;
     }
@@ -50,11 +49,12 @@
      padding-top: 10px;
    }
    .itemNameWrapper span {
-     font-size: 20px;
+     font-size: 18px;
    }
    .wrapperSwiperSliderBtn .btn{
      margin: 0.5rem;
      background: var(--sky);
+     margin-top: 20px;
    }
    .wrapperSwiperSliderBtn .btn:hover{
      background: transparent;
@@ -63,6 +63,7 @@
    }
    .itemName {
      font-weight: 600;
+     font-size: 24px;
    }
    @media only screen and (max-width: 500px){
     .itemNameWrapper span {
@@ -74,7 +75,7 @@
        height: 250px;
      }
      .MainSwipercontainer {
-       height:720px;
+      
       }
       .mainSwiper {
         height: 620px;
@@ -88,10 +89,8 @@
         margin-top: 0px;
       }
    }
-   @media only screen and (max-width: 380px){
-  
+   @media only screen and (max-width: 390px){
      .wrapperSwiperSliderBtn .btn{
-  
        background: var(--sky);
        padding: 15px;
        font-size: 14px;
