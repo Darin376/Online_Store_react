@@ -26,7 +26,7 @@
 .footer .newsletter .form-element{
     background: black;
     display: flex;
-  
+    width: 80%;
 }
 
 .footer .newsletter .form-element input{
@@ -36,7 +36,7 @@
     color: white;
     font-family: var(--Josefin);
     font-size: 1rem;
-    width: 74%; 
+    width: 100%; 
 }
 
 .footer .newsletter .form-element span{

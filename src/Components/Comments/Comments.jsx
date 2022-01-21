@@ -21,7 +21,9 @@ export const Comments = () => {
     const [modalShow, setModalShow] = useState(false);
     const [modalComment, setmodalComment] = useState(false);
     const [upData, setupData] = useState({
-    data: {},
+    data: {
+        message:''
+    },
         id: ''
     });
 
@@ -43,7 +45,7 @@ export const Comments = () => {
     useEffect(() => {
         fetchAll()
     }, [reload])
-
+ 
     function MyVerticallyCenteredModal(props) {
         const { daata } = props;
         const [value, setValue] = useState({
