@@ -33,6 +33,7 @@ export const HeaderAppBar = () => {
         }
         return allInfo
     });
+
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(userLogin());
@@ -42,6 +43,7 @@ export const HeaderAppBar = () => {
         dispatch(userLogout());
       };
     
+
     let productsAll = { products: allInfo.productsAll }
     const handleClick = (searchProduct) => {
         let products = searchProduct.toLowerCase()
@@ -61,6 +63,7 @@ export const HeaderAppBar = () => {
 
     let CartColor = allInfo.total_items ? 'red' : '#c9d1d9';
     let searchLink = !inputText ? pathname : '/Search';
+    
     const googleUser = (loading?<Spinner/>:
         <div>
             {user? (

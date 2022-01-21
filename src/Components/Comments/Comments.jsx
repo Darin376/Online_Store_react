@@ -16,15 +16,12 @@ export const Comments = () => {
     const bd = firebase.firestore();
     const auth = firebase.auth();
     const [user, loading, error] = useAuthState(auth);
-
     const [allDocs, setAllDocs] = useState([]);
     const [reload, setReload] = useState(true);
     const [modalShow, setModalShow] = useState(false);
     const [modalComment, setmodalComment] = useState(false);
     const [upData, setupData] = useState({
-        data: {
-            message: '',
-        },
+    data: {},
         id: ''
     });
 
@@ -75,7 +72,6 @@ export const Comments = () => {
                 }
                 setModalShow(false)
             }
-
       
         }
         return (
@@ -124,8 +120,6 @@ export const Comments = () => {
             }
             setmodalComment(false)
         }
-
-        
         return (
             <Modal
                 {...props}
@@ -148,8 +142,6 @@ export const Comments = () => {
             </Modal>
         );
     }
-
-    const userID = user == null ? false : user.uid;
     const deliteDoc = (id) => {
         bd.collection('comments').doc(id).delete()
             .then(() => {
@@ -163,8 +155,9 @@ export const Comments = () => {
             setReload(false)
         }
     }
-    
-  
+
+    const userID = user == null ? false : user.uid;
+
     if (!allDocs.length) return <Spinner />
     return (
         <div className="userWrapper">
