@@ -173,11 +173,6 @@
     border: 1px solid black;
     color:black;
   }
- @media only screen and (max-width: 1450px){
-    .discountInfo {
-       
-     }
-}
 @media only screen and (max-width: 1130px){
     .site-content .post-content > .post-image .post-info{
         left: 2rem !important;
@@ -219,9 +214,7 @@
 
 }
 @media only screen and (max-width: 520px){
-   .blog{
-        height: 125vh;
-    }
+
     .site-content .post-content > .post-image .post-info{
         display: none;
     }
@@ -236,9 +229,7 @@
     }
 }
 @media only screen and (max-width: 320px){
-    .blog{
-         height: 125vh;
-     }
+
      .site-content .post-content > .post-image .post-info{
          display: none;
      }

@@ -21,7 +21,7 @@
 }
 .headerSearchContainer {
     width:100%;
-    height:4.2vh;
+    // height:4.2vh;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -137,10 +137,10 @@
     flex-direction: column;
 }
 .headerSearchContainer {
-    height:3vh;
+    height:35px;
 }
 .headerWrapper {
-    height:80px;
+    height:90px;
 }
 .headerRightWrapper {
     padding-bottom: 6px;
@@ -208,7 +208,10 @@
     cursor: pointer;
   }
 .headerProfileIconRight {
-   padding: 10px 35px 0px 0px;
+  
    justify-content: center;
+}
+.headerWrapper {
+    height:95px;
 }
  }
