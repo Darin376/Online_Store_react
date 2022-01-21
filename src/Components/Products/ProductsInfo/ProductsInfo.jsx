@@ -112,7 +112,7 @@ export const ProductsInfo = () => {
                             </Button>
                         </div>
                         <Button size="large" variant="contained" onClick={handleAddToCart2}>
-                            <ShoppingCart fontSize="small" /><p className="productsInfoNameButton"> Добавить в корзину </p>
+                            <ShoppingCart fontSize="small" style={{fontSize:'25',  }} /><p className="productsInfoNameButton"> Добавить в корзину </p>
                         </Button>
                     </div>
                 </div>
