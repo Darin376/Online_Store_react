@@ -28,7 +28,7 @@
 }
 
 .tiimer .content .count-down .box{
-  width:9rem;
+  width:10rem;
   text-align: center;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   border:.1rem solid rgba(0,0,0,.3);
@@ -123,4 +123,7 @@
   .tiimer .content{
     margin: 0px 5px 0px 5px;
   }
+  .tiimer .content .count-down{
+  gap:0.4rem;
+ }
 }

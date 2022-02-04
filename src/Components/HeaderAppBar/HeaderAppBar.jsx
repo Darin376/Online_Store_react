@@ -22,6 +22,9 @@ export const HeaderAppBar = () => {
     const navigate = useNavigate();
     const pathname = () => navigate(1);
     const location = useLocation();
+
+    const auth2 = firebase;
+    console.log(auth2)
     const auth = firebase.auth();
     const [user, loading, error] = useAuthState(auth);
  
